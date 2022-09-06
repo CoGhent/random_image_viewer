@@ -20,6 +20,7 @@ FROM <http://stad.gent/ldes/hva>
 FROM <http://stad.gent/ldes/dmg>
 FROM <http://stad.gent/ldes/industriemuseum>
 FROM <http://stad.gent/ldes/archief>
+FROM <http://stad.gent/ldes/stam>
 
 WHERE {
 ?s cidoc:P102_has_title ?title.
@@ -50,6 +51,7 @@ for offset in offsetrange:
     FROM <http://stad.gent/ldes/dmg>
     FROM <http://stad.gent/ldes/industriemuseum>
     FROM <http://stad.gent/ldes/archief>
+    FROM <http://stad.gent/ldes/stam>
     
     WHERE {
     ?s cidoc:P102_has_title ?title.
@@ -67,6 +69,7 @@ for query in querylist:
     df_sparql = df_sparql.append(df_result, ignore_index=True)
 
 df_sparql = df_sparql[df_sparql[1].str.contains("api", na=False)]
+df_sparql = df_sparql.sample(frac=1)
 df_sparql[1] = df_sparql[1].str.replace(r'"', '')
 df_sparql[1] = df_sparql[1].str.replace(r'\r', '')
 
