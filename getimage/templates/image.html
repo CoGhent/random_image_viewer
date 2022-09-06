@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'templates/styles.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="fullheader">
+            <div class="logoparent">
+                <div class="logochild1">
+                    {% load static %} <img src="{% static 'images/logocogent.jpg' %}", style= 'height:95%; width: 95%; object-fit: contain'>
+                </div>
+            </div>
+            <div class="header">
+                <h1>CoGent Random Image Viewer</h1>
+            </div>
+            <div class="logoparent">
+                <div class="logochild2">
+                </div>
+            </div>
+        </div>
+        <div class = 'heading'>
+            <h2>Your Image:</h2>
+        </div>
+        <div class = 'graphbox'>
+            <div class="graph">
+                <img src="{{ iiif_manifest|safe }}", style=  'width: 100%; margin-left: 1cm; margin-top: 1cm; margin-bottom: 1cm; margin-right: 1cm'>
+            </div>
+            <div class="graph2">
+                <h4 class="text">
+                    Instelling: 
+                </h4>
+                <h5 class="text2">{{ instelling|safe }} <br></h5>
+                <h4 class="text">Titel: 
+                </h4>
+                <h5 class="text2">{{ label|safe }} <br></h5>
+            </div>
+        </div>
+    </body>
+</html>
