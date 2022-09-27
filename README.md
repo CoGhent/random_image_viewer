@@ -4,5 +4,5 @@ Random image viewer fetches IIIF manifests from the Linked Data Event Streams of
 
 This code is built using Django framework. To run this code, install django in a virtual environment. Download the code and run 'python manage.py runserver' in the command line.
 
-*example*
+*for example*
 ![image](https://user-images.githubusercontent.com/78723853/192510703-3f9676de-6820-4b0b-b141-f3b1ccf002d4.png)
