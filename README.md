@@ -1,6 +1,6 @@
 # random_image_viewer
 
-Random image viewer fetches IIIF manifests from the Linked Data Event Streams of five cultural heritage institutions: Huis van Alijn, Design Museum Gent, Industriemuseum, STAM and Archief Gent. It randomly selects one manifest and renders the image, title and institution on a webpage (see [view.py](https://github.com/CoGhent/random_image_viewer/blob/master/getimage/views.py). With each refresh, a different random image from the Collections of Ghent is presented.
+Random image viewer fetches IIIF manifests from the Linked Data Event Streams of five cultural heritage institutions: Huis van Alijn, Design Museum Gent, Industriemuseum, STAM and Archief Gent. It randomly selects one manifest and renders the image, title and institution on a webpage (see [view.py](https://github.com/CoGhent/random_image_viewer/blob/master/getimage/views.py)). With each refresh, a different random image from the Collections of Ghent is presented.
 
 This code is built using Django framework. To run this code, install django in a virtual environment. Download the code and run 'python manage.py runserver' in the command line.
 
