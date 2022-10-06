@@ -42,6 +42,7 @@ def image(request):
     else:
         data_json = json.loads(response.read())
         iiif_manifest = data_json["sequences"][0]['canvases'][0]["images"][0]["resource"]["@id"]
+        iiif_manifest = iiif_manifest.replace("full/full/0/default.jpg","full/1000,/0/default.jpg")
         label = data_json["label"]['@value']
         if 'stam' in manifest:
             instelling = 'STAM'
